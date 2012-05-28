@@ -2,6 +2,7 @@
 
 namespace chrishoult\Tests;
 
+// @codeCoverageIgnoreStart
 abstract class TestCase extends \PHPUnit_Framework_TestCase
 {
 
@@ -57,3 +58,4 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
         $this->assertEquals($output, $value);
     }
 }
+// @codeCoverageIgnoreEnd
