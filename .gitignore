@@ -1,0 +1,12 @@
+# Symfony directories
+vendor/*
+*/logs/*
+*/cache/*
+web/uploads/*
+web/bundles/*
+
+# Netbeans
+nbproject/*
+
+# Configuration files
+app/config/parameters.ini
