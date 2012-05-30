@@ -28,6 +28,7 @@ class TagTest extends TestCase
     {
         return array(
             array('name', 'test name'),
+            array('name', 'test name 2'),
             array('id', 123),
             array('lft', 123),
             array('rgt', 123),
