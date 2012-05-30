@@ -36,17 +36,37 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   %database_driver%
-        host:     %database_host%
-        port:     %database_port%
-        dbname:   %database_name%
-        user:     %database_user%
-        password: %database_password%
-        charset:  UTF8
-
+      connections:
+        default:
+          driver:   %database_driver%
+          host:     %database_host%
+          port:     %database_port%
+          dbname:   %database_name%
+          user:     %database_user%
+          password: %database_password%
+          charset:  UTF8
+        tagging:
+          driver:   %tagging_database_driver%
+          host:     %tagging_database_host%
+          port:     %tagging_database_port%
+          dbname:   %tagging_database_name%
+          user:     %tagging_database_user%
+          password: %tagging_database_password%
+          charset:  UTF8
     orm:
         auto_generate_proxy_classes: %kernel.debug%
-        auto_mapping: true
+        default_entity_manager: default
+        entity_managers:
+          default:
+            name: default
+            connection: default
+          tagging:
+            name: tagging
+            connection: default
+            mappings:
+              TaggingBundle:
+                type: annotation
+                dir: Entity/
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -58,3 +78,13 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+
+stof_doctrine_extensions:
+    default_locale: en_US
+    orm:
+        tagging:
+          tree: true
+          timestampable: false
+          loggable: false
+          translatable: false
+          sluggable: false

@@ -1,6 +1,7 @@
 <?php
 
 namespace chrishoult\Tagging;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * An interface to model a tag

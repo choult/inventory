@@ -29,6 +29,10 @@ class TagTest extends TestCase
         return array(
             array('name', 'test name'),
             array('id', 123),
+            array('lft', 123),
+            array('rgt', 123),
+            array('lvl', 123),
+            array('parent', $this->getObject()),
         );
     }
 }

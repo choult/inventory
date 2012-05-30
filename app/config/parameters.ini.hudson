@@ -9,6 +9,13 @@
     database_user     = root
     database_password =
 
+    tagging_database_driver   = pdo_mysql
+    tagging_database_host     = localhost
+    tagging_database_port     =
+    tagging_database_name     = symfony
+    tagging_database_user     = root
+    tagging_database_password =
+
     mailer_transport  = smtp
     mailer_host       = localhost
     mailer_user       =
