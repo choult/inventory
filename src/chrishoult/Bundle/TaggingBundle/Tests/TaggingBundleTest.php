@@ -1,6 +1,6 @@
 <?php
 
-namespace chrishoult\Bundle\TaggingBundle\Tests;
+namespace chrishoult\Bundle\TaggingBundle\Tests\Unit;
 
 /**
  * Test to improve test coverage ;)
